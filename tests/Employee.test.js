@@ -5,7 +5,7 @@ describe('Employee', () => {
 
     describe('instantiation', () => {
         it('should pass and instantiate object correctly ', () => {
-            //Act/Arrange
+            // Arrange/Act
             let testEmployee = new Employee("Jason", 1, "JasonDay@Gmail.com");
             //Assert
             expect(testEmployee.name).toBe("Jason")
@@ -15,7 +15,7 @@ describe('Employee', () => {
     });
     describe('getEmail', () => {
 
-        it('should', () => {
+        it('should get Email', () => {
             //Arrange
             let testEmployee = new Employee("Jason", 1, "JasonDay@Gmail.com");
             //Act
@@ -24,12 +24,29 @@ describe('Employee', () => {
             expect(email).toBe("JasonDay@Gmail.com");
         })
     });
-    // describe('getID', () => {
+    
+    
+    describe('getId', () => {
+        it('should get Id', () => {
+            //Arrange
+            let testEmployee = new Employee("Jason", 1, "JasonDay@Gmail.com");
+            //Act
+            let Id = testEmployee.getId();
+            //Assert
+            expect(Id).toBe(1);
+        })
 
-    // });
-    // describe('getName', () => {
-
-    // });
+    });
+    describe('getName', () => {
+        it('should get Name', () => {
+            //Arrange
+            let testEmployee = new Employee("Jason", 1, "JasonDay@Gmail.com");
+            //Act
+            let Name = testEmployee.getName();
+            //Assert
+            expect(Name).toBe("Jason");
+        })
+    });
     // describe('getRole', () => {
 
     // });
