@@ -47,7 +47,13 @@ describe('Employee', () => {
             expect(Name).toBe("Jason");
         })
     });
-    // describe('getRole', () => {
-
-    // });
+    describe('getRole', () => {
+        it('should print Employee', () => {
+            let testEmployee = new Employee("Jason", 1, "JasonDay@Gmail.com");
+            //Act
+            let role = testEmployee.getRole();
+            //Assert
+            expect(role).toBe("Employee");
+        })
+    });
 });
