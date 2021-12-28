@@ -29,7 +29,8 @@ function generateBeginningHtml() {
     <body>
         <header>
             <h1>My Team</h1>
-        </header>`;
+        </header>
+        <div class="row justify-content-center">`;
 }
 
 function generateCards(employees) {
@@ -39,7 +40,8 @@ function generateCards(employees) {
 }
 
 function generateEndingHtml() {
-    html += `</body>
+    html += `</div> 
+    </body>
 
     </html>`;
 }
