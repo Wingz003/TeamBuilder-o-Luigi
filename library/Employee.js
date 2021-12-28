@@ -7,18 +7,18 @@ class Employee {
     }
     getCard() {
 
-        return `<div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h4 class="card-title">${this.name}
-            <h5>${this.getRole()}</h5>
-          </h4>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">ID: ${this.id}</li>
-          <li class="list-group-item">Email: ${this.email}</li>
-          <li class="list-group-item">${this.getRoleSpecificInfo()}</li>
-        </ul>
-      </div>`
+        return `<div class="card m-3" style="width: 16rem;">
+
+            <div class="card-body ">
+                <h5 class="card-title">${this.name}</h5>
+                <p class="card-text">${this.getRole()}</p>
+            </div>
+            <ul class="list-group m-4">
+                <li class="list-group-item">ID: ${this.id}</li>
+                <li class="list-group-item">Email: ${this.email}</li>
+                <li class="list-group-item">${this.getRoleSpecificInfo()}</li>
+            </ul>
+        </div>`
     }
     getRoleSpecificInfo() {
 
