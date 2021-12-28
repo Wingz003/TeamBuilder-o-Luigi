@@ -12,7 +12,7 @@ class Engineer extends Employee {
     }
     getRoleSpecificInfo() {
 
-        return `Github: ${this.github}`;
+        return `Github: <a href="https://github.com/${this.github}">${this.github}</a>`;
     }
 }
 module.exports = Engineer;

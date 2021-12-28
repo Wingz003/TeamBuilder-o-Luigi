@@ -15,7 +15,7 @@ class Employee {
             </div>
             <ul class="list-group m-4">
                 <li class="list-group-item">ID: ${this.id}</li>
-                <li class="list-group-item">Email: ${this.email}</li>
+                <li class="list-group-item">Email: <a href="mailto:${this.email}">${this.email}</a></li>
                 <li class="list-group-item">${this.getRoleSpecificInfo()}</li>
             </ul>
         </div>`

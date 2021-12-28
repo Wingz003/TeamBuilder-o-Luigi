@@ -2,7 +2,7 @@ const fs = require('fs');
 let html = '';
 function generateFile(employees) {
     generateBeginningHtml();
-    generateCards(employees);
+    html += generateCards(employees);
     generateEndingHtml();
     fs.writeFile('./output/index.html', html, err => {
         if(err) {
@@ -34,9 +34,16 @@ function generateBeginningHtml() {
 }
 
 function generateCards(employees) {
-    for (const employee of employees) {
-        html += employee.getCard();
+    let htmlToAdd = [];
+    for (let i = 0; i < employees.length; i++) {
+        if(i % 3 === 0) {
+            htmlToAdd += `</div>      
+            <div class="row justify-content-center">`
+        }
+        htmlToAdd += employees[i].getCard();
+        
     }
+    return htmlToAdd;
 }
 
 function generateEndingHtml() {
@@ -49,3 +56,4 @@ function generateEndingHtml() {
 
 
 exports.generateFile = generateFile;
+exports.generateCards = generateCards;
